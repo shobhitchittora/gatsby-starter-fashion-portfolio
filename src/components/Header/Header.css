@@ -1,8 +1,10 @@
 .site-header {
   display: flex;
-  width: '100%';
+  width: 50%;
   min-height: 64px;
-  padding: 2px;
+  padding: 2px 16px;
   box-sizing: 'border-box';
   flex-shrink: 0;
+  align-self: flex-end;
+  float: right;
 }

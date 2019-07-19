@@ -1,0 +1,31 @@
+.Button {
+  padding: 8px;
+  min-width: 128px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.Button-link:hover {
+  background-color: #EEEEEE;
+}
+
+.Button-primary {
+  background-color: #FAFAFA;
+  color: #212121;
+}
+
+.Button-primary:hover {
+  background-color: #EEEEEE;
+}
+
+.Button-secondary {
+  background-color: #212121;
+  color: #FAFAFA;
+}
+
+.Button-secondary:hover {
+  background-color: #424242;
+}

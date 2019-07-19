@@ -5,7 +5,7 @@ import SEO from '@components/SEO'
 function CollectionPage(){
   return(
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Collections" />
     </Layout>
   )
 }

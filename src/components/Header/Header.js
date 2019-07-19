@@ -1,21 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import Item from '@components/Item';
+import { navigate } from 'gatsby'
+import Button from '@components/Button'
 import './Header.css'
 
-function Header(props) {
+function Header({ menuLinks }) {
   return (
     <header className="site-header">
-      <Item><Link> Home </Link></Item>
-      <Item><Link> Collections </Link></Item>
-      
+      {
+        menuLinks.map(({ name, link }) => <Button onClick={() => navigate(link)} type={'link'}> {name} </Button>)
+      }
     </header>
   )
 }
 
 Header.propTypes = {
-  children: PropTypes.any
+  menuLinks: PropTypes.array,
 }
 
 export default Header

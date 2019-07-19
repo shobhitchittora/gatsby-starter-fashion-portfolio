@@ -5,6 +5,16 @@ module.exports = {
     title: `Gatsby Fashion Portfolio Starter`,
     description: `Beautiful portfolio for your fashion career.`,
     author: `@shobhitchittora`,
+    menuLinks: [
+      {
+        name: 'Home',
+        link: '/'
+      },
+      {
+        name: 'Collections',
+        link: '/collections'
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
