@@ -1,0 +1,8 @@
+.site-header {
+  display: flex;
+  width: '100%';
+  min-height: 64px;
+  padding: 2px;
+  box-sizing: 'border-box';
+  flex-shrink: 0;
+}

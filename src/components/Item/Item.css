@@ -1,0 +1,10 @@
+.Item {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Item:hover {
+  background-color: #EEEEEE;
+}
