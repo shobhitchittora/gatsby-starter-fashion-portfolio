@@ -1,5 +1,28 @@
-.card-container{
+.card-container {
   padding: 16px;
   max-height: 480px;
-  margin-left: 64px;
+  margin-left: 10%;
+}
+
+.horizontal-line {
+  background-color: orange;
+  height: 1em;
+  width: 5em;
+}
+
+.title {
+  font-size: 5.5em;
+  font-weight: 300;
+}
+
+.description {
+  font-size: 0.8rem;
+  margin-right: 30%;
+  margin-top: 64px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .title{
+    font-size: 2em;
+  }
 }

@@ -1,8 +1,9 @@
 import React from 'react'
+import './Logo.css'
 
 function Logo() {
   return (
-    <h1> YOUR LOGO HERE </h1>
+    <h2 className="logo"> LOGO </h2>
   )
 }
 

@@ -21,15 +21,15 @@ const Image = ({ withFrame }) => {
     query {
       placeholderImage: file(relativePath: { eq: "gal-gadot-home.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 600) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 900) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
     }
   `)
 
-  return <Img className={classnames({ 'img-frame': withFrame })} fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img className={classnames({ 'img-frame': withFrame })} fixed={data.placeholderImage.childImageSharp.fixed} />
 }
 
 Image.propTypes = {
