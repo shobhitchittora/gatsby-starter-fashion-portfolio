@@ -21,7 +21,7 @@ const Image = ({ withFrame }) => {
     }
   `)
 
-  return <Img className={classnames({ 'img-frame': withFrame })} fixed={data.image.childImageSharp.fixed} />
+  return <Img className={classnames({ 'img-frame': withFrame })} fluid={data.image.childImageSharp.fluid} />
 }
 
 Image.propTypes = {

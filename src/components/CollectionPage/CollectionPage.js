@@ -36,9 +36,8 @@ function CollectionPage() {
 
       <div className="card">
         <DescriptionCard
-          noCrown
+          longDescription
           noButton
-          titleStyle={{ fontSize: '4.4em' }}
           title={getPage().title}
           description={getPage().description}
         />

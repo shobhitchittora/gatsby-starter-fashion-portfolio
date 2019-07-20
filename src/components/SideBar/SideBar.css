@@ -50,7 +50,7 @@
 /* The rest copied directly from react-burger-menu docs */
 
 .bm-burger-button {
-  position: fixed;
+  position: absolute;
   width: 26px;
   height: 20px;
   right: 32px;

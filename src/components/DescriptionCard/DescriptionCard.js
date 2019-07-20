@@ -5,7 +5,7 @@ import Button from '@components/Button'
 import './DescriptionCard.css'
 import { navigate } from 'gatsby'
 
-function DescriptionCard({ noCrown, noButton, titleStyle, title, description }) {
+function DescriptionCard({ noCrown, noButton, longDescription, titleStyle, title, description }) {
   return (
     <div className="card-container">
       {
@@ -13,7 +13,7 @@ function DescriptionCard({ noCrown, noButton, titleStyle, title, description }) 
         <div className="horizontal-line" />
       }
       <h1 className="title" style={titleStyle}> {title} </h1>
-      <p className={classnames('description', { 'description-long': noCrown })}>{description}</p>
+      <p className={classnames('description', { 'description-long': longDescription })}>{description}</p>
       {
         !noButton &&
         <Button className="action-btn" type={'secondary'} size={'large'} onClick={() => navigate('/collections')}> Collections → </Button>
@@ -24,6 +24,7 @@ function DescriptionCard({ noCrown, noButton, titleStyle, title, description }) 
 
 DescriptionCard.propTypes = {
   noCrown: PropTypes.bool,
+  longDescription: PropTypes.bool,
   noButton: PropTypes.bool,
   titleStyle: PropTypes.object,
   title: PropTypes.string,

@@ -21,3 +21,43 @@
   padding: 64px 32px;
   text-align: right;
 }
+
+@media only screen and (min-width: 200px) and (max-width: 479px) {
+  .index-card-container {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .index-card-container {
+    display: none;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .index-card-container {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .index-card-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .index-card-title {
+    font-size: 1.4em;
+    padding: 16px;
+
+  }
+  .index-card-index {
+    font-size: 4em;
+    padding: 64px 32px;
+    text-align: right;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {}
