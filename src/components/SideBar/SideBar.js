@@ -28,7 +28,7 @@ function SideBar(props) {
         {
           props.socialLinks.map(({ name, link }) => {
             const Icon = iconConfig[name];
-            return <a href={link} target={'__blank'} className="link"><Icon className="icon" /></a>
+            return <a key={name} href={link} target={'__blank'} className="link"><Icon className="icon" /></a>
           })
         }
 

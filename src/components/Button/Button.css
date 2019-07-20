@@ -3,10 +3,16 @@
   min-width: 128px;
   max-height: 80px;
   text-align: center;
-  display: flex;
+  flex: 1;
+  flex-basis: auto;
   justify-content: center;
-  flex-direction: column;
   cursor: pointer;
+}
+
+.Button:focus,
+.Button:active {
+  outline-width: 0;
+  border: none;
 }
 
 .Button-large {

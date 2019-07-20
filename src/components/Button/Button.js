@@ -5,7 +5,11 @@ import './Button.css'
 
 function Button({ onClick, type, style, size, className, children }) {
   return (
-    <button className={classnames(className, 'Button', `Button-${type}`, `Button-${size}`)} style={style} onClick={onClick}>
+    <button
+      className={classnames(className, 'Button', { [`Button-${type}`]: type, [`Button-${size}`]: size })}
+      style={style}
+      onClick={onClick}
+    >
       {children}
     </button>
   )

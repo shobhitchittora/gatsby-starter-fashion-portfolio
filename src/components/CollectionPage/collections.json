@@ -1,0 +1,24 @@
+{
+  "pages": [
+    {
+      "title": "Fashinable stuff 1",
+      "description": "Some description for this 1"
+    },
+    {
+      "title": "Fashinable stuff 2",
+      "description": "Some description for this 2"
+    },
+    {
+      "title": "Fashinable stuff 3",
+      "description": "Some description for this 3"
+    },
+    {
+      "title": "Fashinable stuff 4",
+      "description": "Some description for this 4"
+    },
+    {
+      "title": "Fashinable stuff 5",
+      "description": "Some description for this 5"
+    }
+  ]
+}

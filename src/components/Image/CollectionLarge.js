@@ -10,10 +10,10 @@ const Image = ({ withFrame }) => {
     query {
       image: file(relativePath: { eq: "gal-gadot-collection-large.jpg" }) {
         childImageSharp {
-          fixed(width: 900) {
-            ...GatsbyImageSharpFixed
-          }
-          fluid(maxWidth: 500){
+          # fixed(height: 800) {
+          #   ...GatsbyImageSharpFixed
+          # }
+          fluid(maxWidth: 300){
             ...GatsbyImageSharpFluid
           }
         }

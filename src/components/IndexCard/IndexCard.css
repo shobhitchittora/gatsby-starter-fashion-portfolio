@@ -1,7 +1,7 @@
 .index-card-container {
   width: 300px;
   height: 300px;
-  opacity: 0.6;
+  opacity: 0.9;
   background-color: orange;
   color: white;
   display: flex;
