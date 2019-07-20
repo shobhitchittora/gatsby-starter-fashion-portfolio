@@ -20,6 +20,10 @@
   margin-top: 5vw;
 }
 
+.description-long{
+  margin-right: 2vw;
+}
+
 .action-btn {
   margin-top: 5vw;
 }
@@ -33,6 +37,7 @@
   .horizontal-line {
     height: 0.5em;
     width: 3em;
+    margin-left: 0;
   }
 
   .title {
@@ -58,6 +63,7 @@
   .horizontal-line {
     height: 0.5em;
     width: 3em;
+    margin-left: 0;
   }
 
   .description {
@@ -75,6 +81,7 @@
   .horizontal-line {
     height: 0.5em;
     width: 3em;
+    margin-left: 0;
   }
 
   .title {
@@ -97,13 +104,16 @@
     font-size: 4em;
   }
 
-  .description{
+  .description {
     font-size: 0.8rem;
     margin-top: 4vw;
+    margin-left: 0;
   }
 }
 
 
-@media only screen and (min-width: 1200px)  {
-  
+@media only screen and (min-width: 1200px) {
+  .horizontal-line {
+    margin-left: -6vw;
+  }
 }

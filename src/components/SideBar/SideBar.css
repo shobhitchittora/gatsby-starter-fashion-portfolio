@@ -1,0 +1,96 @@
+.icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 32px;
+  cursor: pointer;
+  fill: #d1d1d1;
+}
+
+.icon:hover {
+  fill: #EEEEEE;
+}
+
+.icon-strip {
+  padding: 16px;
+  max-height: 80px;
+  position: absolute;
+  bottom: 0;
+}
+
+.link {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-right: 16px;
+}
+
+
+
+/* 3rd parth css below */
+
+
+.bm-item:hover {
+  color: #EEEEEE;
+}
+
+/* Individual item */
+.bm-item {
+  font-family: inherit;
+  font-size: 1.2em;
+  display: inline-block;
+  border: none;
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 20px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+
+/* The rest copied directly from react-burger-menu docs */
+
+.bm-burger-button {
+  position: fixed;
+  width: 26px;
+  height: 20px;
+  right: 32px;
+  top: 25px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}

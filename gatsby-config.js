@@ -14,6 +14,28 @@ module.exports = {
         name: 'Collections',
         link: '/collections'
       }
+    ],
+    socialLinks: [
+      {
+        name: 'fb',
+        link: 'http://fb.com'
+      },
+      {
+        name: 'twitter',
+        link: 'http://twitter.com'
+      },
+      {
+        name: 'instagram',
+        link: 'http://instagram.com'
+      },
+      {
+        name: 'pinterest',
+        link: 'http://pinterest.com'
+      },
+      {
+        name: 'gmail',
+        link: 'mailto:chittorashobhit@gmail.com'
+      }
     ]
   },
   plugins: [
@@ -23,7 +45,8 @@ module.exports = {
       options: {
         src: path.join(__dirname, 'src'),
         pages: path.join(__dirname, 'src/pages'),
-        '@components': path.join(__dirname, 'src/components')
+        '@components': path.join(__dirname, 'src/components'),
+        '@assets': path.join(__dirname, 'src/images')
       }
     },
     {
@@ -31,6 +54,14 @@ module.exports = {
       options: {
         google: {
           families: ['Roboto']
+        }
+      }
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/
         }
       }
     },

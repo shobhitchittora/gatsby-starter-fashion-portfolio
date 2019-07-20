@@ -6,6 +6,5 @@
   padding: 2px 16px;
   box-sizing: 'border-box';
   flex-shrink: 0;
-  align-self: flex-end;
-  float: right;
+  justify-content: center;
 }
