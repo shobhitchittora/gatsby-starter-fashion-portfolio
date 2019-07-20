@@ -1,6 +1,5 @@
 .card-container {
   padding: 16px;
-  max-height: 480px;
   margin-left: 10%;
 }
 
@@ -16,13 +15,95 @@
 }
 
 .description {
-  font-size: 0.8rem;
-  margin-right: 30%;
-  margin-top: 64px;
+  font-size: 1rem;
+  margin-right: 20vw;
+  margin-top: 5vw;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  .title{
+.action-btn {
+  margin-top: 5vw;
+}
+
+
+@media only screen and (min-width: 200px) and (max-width: 479px) {
+  .card-container {
+    margin-left: 0;
+  }
+
+  .horizontal-line {
+    height: 0.5em;
+    width: 3em;
+  }
+
+  .title {
     font-size: 2em;
   }
+
+  .description {
+    font-size: 0.8rem;
+    margin-right: 0;
+    margin-top: 5vw;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .title {
+    font-size: 3em;
+  }
+
+  .card-container {
+    margin-left: 0;
+  }
+
+  .horizontal-line {
+    height: 0.5em;
+    width: 3em;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    margin-right: 0;
+    margin-top: 5vw;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card-container {
+    margin-left: 0;
+  }
+
+  .horizontal-line {
+    height: 0.5em;
+    width: 3em;
+  }
+
+  .title {
+    font-size: 4em;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-right: 0;
+    margin-top: 5vw;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .card-container {
+    margin-left: 0;
+  }
+
+  .title {
+    font-size: 4em;
+  }
+
+  .description{
+    font-size: 0.8rem;
+    margin-top: 4vw;
+  }
+}
+
+
+@media only screen and (min-width: 1200px)  {
+  
 }

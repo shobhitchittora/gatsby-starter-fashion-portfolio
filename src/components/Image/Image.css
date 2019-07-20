@@ -1,3 +1,15 @@
-.img-frame{
+.img-frame {
   border: 64px solid #EEEEEE;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 479px) {
+  .img-frame {
+    border: 16px solid #EEEEEE;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .img-frame {
+    border: 32px solid #EEEEEE;
+  }
 }

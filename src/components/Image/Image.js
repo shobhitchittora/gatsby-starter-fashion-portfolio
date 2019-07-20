@@ -19,17 +19,20 @@ import './Image.css'
 const Image = ({ withFrame }) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gal-gadot-home.jpg" }) {
+      image: file(relativePath: { eq: "gal-gadot-home.jpg" }) {
         childImageSharp {
           fixed(width: 900) {
             ...GatsbyImageSharpFixed
+          }
+          fluid(maxWidth: 780){
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
 
-  return <Img className={classnames({ 'img-frame': withFrame })} fixed={data.placeholderImage.childImageSharp.fixed} />
+  return <Img className={classnames({ 'img-frame': withFrame })} fluid={data.image.childImageSharp.fluid} />
 }
 
 Image.propTypes = {

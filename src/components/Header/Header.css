@@ -1,6 +1,6 @@
 .site-header {
   display: flex;
-  width: 50%;
+  width: 100vw;
   min-height: 64px;
   max-height: 80px;
   padding: 2px 16px;

@@ -9,6 +9,10 @@
   cursor: pointer;
 }
 
+.Button-large {
+  padding: 16px;
+}
+
 .Button-link:hover {
   background-color: #EEEEEE;
 }
@@ -29,4 +33,10 @@
 
 .Button-secondary:hover {
   background-color: #424242;
+}
+
+@media only screen and (min-width: 350px) {
+  .Button-large {
+    padding: 10px;
+  }
 }

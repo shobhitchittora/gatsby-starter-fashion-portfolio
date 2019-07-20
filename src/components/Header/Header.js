@@ -10,7 +10,7 @@ function Header({ menuLinks }) {
     <header className="site-header">
       <Logo/>
       {
-        menuLinks.map(({ name, link }) => <Button onClick={() => navigate(link)} type={'link'}> {name} </Button>)
+        menuLinks.map(({ name, link }) => <Button key={name} onClick={() => navigate(link)} type={'link'}> {name} </Button>)
       }
     </header>
   )
