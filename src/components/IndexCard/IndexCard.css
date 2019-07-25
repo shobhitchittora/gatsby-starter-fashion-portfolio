@@ -2,7 +2,7 @@
   width: 300px;
   height: 300px;
   opacity: 0.9;
-  background-color: orange;
+  background-color: #FFA726;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -52,6 +52,7 @@
     padding: 16px;
 
   }
+
   .index-card-index {
     font-size: 4em;
     padding: 64px 32px;

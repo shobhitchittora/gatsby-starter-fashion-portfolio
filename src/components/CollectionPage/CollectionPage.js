@@ -1,13 +1,31 @@
 import React, { useState } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import { CollectionThumb, CollectionLarge } from '@components/Image'
 import DescriptionCard from '@components/DescriptionCard'
 import IndexCard from '@components/IndexCard'
 import Button from '@components/Button'
+import { Grid } from '@components/Grid'
 import './CollectionPage.css'
 import { pages as PAGES } from './collections.json'
 
 function CollectionPage() {
-  const [page, setPage] = useState(0);
+  const data = useStaticQuery(graphql`
+  query {
+    allFile(filter: { name: { regex: "/page-1-*/" }, extension: { regex: "/(jpeg|jpg|gif|png)/" }, sourceInstanceName: { eq: "images"}}) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 300) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+  `)
+
+  const [page, setPage] = useState(0)
 
   function incrementPage() {
     if (page < PAGES.length - 1)
@@ -50,6 +68,10 @@ function CollectionPage() {
         <Button type="secondary" style={{ fontSize: '2em' }} onClick={incrementPage} >
           →
         </Button>
+      </div>
+
+      <div className="image-grid">
+        <Grid items={data.allFile.edges} />
       </div>
 
     </div >

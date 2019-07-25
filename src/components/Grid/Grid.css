@@ -1,0 +1,28 @@
+.grid-container {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px;
+  align-items: center;
+}
+
+.grid-item {}
+
+
+@media only screen and (min-width: 200px) and (max-width: 479px) {
+  .grid-container {
+    grid-template-columns: auto;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .grid-container {
+    grid-template-columns: auto;
+  }
+}
