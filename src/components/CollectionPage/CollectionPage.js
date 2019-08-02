@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { CollectionThumb, CollectionLarge } from '@components/Image'
+import Image from '@components/Image'
 import DescriptionCard from '@components/DescriptionCard'
 import IndexCard from '@components/IndexCard'
 import Button from '@components/Button'
@@ -8,10 +8,11 @@ import { Grid } from '@components/Grid'
 import './CollectionPage.css'
 import { pages as PAGES } from './collections.json'
 
+
 function CollectionPage() {
   const data = useStaticQuery(graphql`
   query {
-    allFile(filter: { name: { regex: "/page-1-*/" }, extension: { regex: "/(jpeg|jpg|gif|png)/" }, sourceInstanceName: { eq: "images"}}) {
+    gridImages: allFile(filter: { name: { regex: "/page-1-grid-*/" }, extension: { regex: "/(jpeg|jpg|gif|png)/" }, sourceInstanceName: { eq: "images"}}) {
       edges {
         node {
           childImageSharp {
@@ -22,6 +23,33 @@ function CollectionPage() {
         }
       }
     }
+
+    allThumbImages: allFile(filter: { name: { regex: "/thumb/" }, extension: { regex: "/(jpeg|jpg|gif|png)/" }, sourceInstanceName: { eq: "images"}}) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fluid(maxWidth: 300, maxHeight: 240) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+
+    allLargeImages: allFile(filter: { name: { regex: "/large/" }, extension: { regex: "/(jpeg|jpg|gif|png)/" }, sourceInstanceName: { eq: "images"}}) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fluid(maxWidth: 300) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+
   }
   `)
 
@@ -41,15 +69,36 @@ function CollectionPage() {
     return page < PAGES.length ? PAGES[page] : 'dummy'
   }
 
+  function getThumbImage() {
+    return data.allThumbImages.edges.find((image) => {
+      return image.node.name === `page-${page + 1}-thumb`
+    }) ||
+
+      data.allThumbImages.edges.find((image) => {
+        return image.node.name === `page-1-thumb`
+      })
+  }
+
+
+  function getLargeImage() {
+    return data.allLargeImages.edges.find((image) => {
+      return image.node.name === `page-${page + 1}-large`
+    }) ||
+
+      data.allLargeImages.edges.find((image) => {
+        return image.node.name === `page-1-large`
+      })
+  }
+
   return (
     <div className="collection-page-container">
       <div className="thumb-container">
-        <CollectionThumb />
+        <Image fluid={getThumbImage().node.childImageSharp.fluid} />
         <IndexCard index={page + 1} />
       </div>
 
       <div className="large">
-        <CollectionLarge />
+        <Image fluid={getLargeImage().node.childImageSharp.fluid} />
       </div>
 
       <div className="card">
@@ -71,10 +120,10 @@ function CollectionPage() {
       </div>
 
       <div className="image-grid">
-        <Grid items={data.allFile.edges} />
+        <Grid items={data.gridImages.edges} />
       </div>
 
-    </div >
+    </div>
   )
 }
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import './Image.css'
 
@@ -16,23 +15,9 @@ import './Image.css'
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ({ withFrame }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      image: file(relativePath: { eq: "gal-gadot-home.jpg" }) {
-        childImageSharp {
-          fixed(width: 900) {
-            ...GatsbyImageSharpFixed
-          }
-          fluid(maxWidth: 780){
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+const Image = ({ withFrame, fluid }) => {
 
-  return <Img className={classnames({ 'img-frame': withFrame })} fluid={data.image.childImageSharp.fluid} />
+  return <Img className={classnames({ 'img-frame': withFrame })} fluid={fluid} />
 }
 
 Image.propTypes = {

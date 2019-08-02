@@ -4,7 +4,14 @@ import GridItem from './GridItem'
 import Img from 'gatsby-image'
 import './Grid.css'
 
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5)
+}
+
 function Grid({ items }) {
+
+  shuffle(items)
+
   return (
     <div className='grid-container'>
       {
