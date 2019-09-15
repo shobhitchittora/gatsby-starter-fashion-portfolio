@@ -3,6 +3,7 @@
   display: grid;
   grid-template-rows: 20vh 20vh 55vh;
   grid-template-columns: 350px 1fr 3fr 80px 80px 4fr;
+  grid-gap: 16px 0;
 }
 
 .thumb-container {
@@ -40,6 +41,7 @@
     grid-template-rows: repeat(auto-fill, minmax(80px, 1fr));
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(100px, auto);
+    
   }
 
   .btn-container {
