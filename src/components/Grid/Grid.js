@@ -8,14 +8,19 @@ function shuffle(array) {
   array.sort(() => Math.random() - 0.5)
 }
 
-function Grid({ items }) {
+function Grid({ items, page }) {
 
   shuffle(items)
-
+  const pageItems = []
+  items.map(({ node }) => {
+    if (node.name.includes(('page-'+page+'-grid'))) { 
+      pageItems.push({'node':node})
+    }
+  })
   return (
     <div className='grid-container'>
       {
-        items.map(({ node }) =>
+        pageItems.map(({ node }) =>
           <GridItem>
             <Img fluid={node.childImageSharp.fluid} />
           </GridItem>

@@ -12,9 +12,10 @@ import { pages as PAGES } from './collections.json'
 function CollectionPage() {
   const data = useStaticQuery(graphql`
   query {
-    gridImages: allFile(filter: { name: { regex: "/page-1-grid-*/" }, extension: { regex: "/(jpeg|jpg|gif|png)/" }, sourceInstanceName: { eq: "images"}}) {
+    gridImages: allFile(filter: { name: { regex: "/-grid-*/" }, extension: { regex: "/(jpeg|jpg|gif|png)/" }, sourceInstanceName: { eq: "images"}}) {
       edges {
         node {
+          name
           childImageSharp {
             fluid(maxWidth: 300) {
               ...GatsbyImageSharpFluid
@@ -120,7 +121,7 @@ function CollectionPage() {
       </div>
 
       <div className="image-grid">
-        <Grid items={data.gridImages.edges} />
+        <Grid items={data.gridImages.edges} page={page+1} />
       </div>
 
     </div>
